@@ -1,16 +1,55 @@
-# mobile_lab
+# Интерактивный учебник по мобильной разработке  
+**Курсовой проект по дисциплине «Программирование приложений мобильных устройств»**  
+Кубанский государственный технологический университет (КубГТУ)
 
-A new Flutter project.
+> 📱🎓 Образовательное приложение, охватывающее ключевые темы Android- и кроссплатформенной разработки: архитектура, компоненты, навигация, работа с картами, SQLite, PWA и многое другое.
 
-## Getting Started
+## 🌐 Демо
 
-This project is a starting point for a Flutter application.
+Попробуйте учебник прямо в браузере:  
+👉 **[https://idlenonsense.github.io/mobile-lab/](https://idlenonsense.github.io/mobile-lab/)**
 
-A few resources to get you started if this is your first Flutter project:
+## 📲 Установка на Android
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Скачайте последнюю версию APK:  
+📥 [**Скачать APK из Releases**](https://github.com/idlenonsense/mobile-lab/releases)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Поддерживаемые платформы
+
+| Платформа | Статус | Комментарий |
+|----------|--------|-------------|
+| **Android** | ✅ Готово | Установка через APK |
+| **Web (PWA)** | ✅ Готово | Работает в любом современном браузере |
+| **iOS** | 🚧 Не собрано | Требуется macOS и Xcode |
+| **Windows** | 💻 Локальная сборка | `flutter build windows` |
+
+## 🧠 Основные темы
+
+Учебник включает интерактивные разделы по:
+- Архитектуре Android (Activity, Fragment, Intent)
+- Layout-контейнерам (`LinearLayout`, `RelativeLayout`, `FrameLayout`)
+- Работе с картами и GPS
+- SQLite и локальному хранению данных
+- Визуальным компонентам (`Toast`, `Gallery`, `SurfaceView`)
+- HTML5 и современным подходам к мобильной разработке
+- PWA и кроссплатформенным технологиям
+
+Каждый раздел сопровождается иллюстрациями и поясняющими схемами.
+
+## 🛠 Технологии
+
+- **Фреймворк**: [Flutter](https://flutter.dev) (язык Dart)
+- **Архитектура**: StatefulWidget + навигация через `Navigator`
+- **Иконка и метаданные**: настроены через `flutter_launcher_icons`
+- **Деплой Web**: GitHub Actions + GitHub Pages
+- **Сборка Android**: `flutter build apk --split-per-abi`
+
+## ▶️ Запуск локально
+
+Убедитесь, что установлены [Flutter](https://docs.flutter.dev/get-started/install) и [Git](https://git-scm.com/).
+
+```bash
+git clone https://github.com/idlenonsense/mobile-lab.git
+cd mobile-lab
+flutter pub get
+flutter run
