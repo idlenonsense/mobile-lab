@@ -28,6 +28,15 @@ class Module {
   })  : hasInteractive = false,
         hasTheory = true;
 
+  Module.interactiveOnly({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.quizQuestions,
+    required this.labNumber,
+  })  : hasInteractive = false,
+        hasTheory = true;
+
   Module.quizOnly({
     required this.id,
     required this.title,

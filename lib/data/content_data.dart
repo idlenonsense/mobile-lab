@@ -1,3 +1,4 @@
+import 'models/main_module.dart';
 import 'models/module.dart';
 import 'models/lecture.dart';
 import 'models/question.dart';
@@ -754,5 +755,48 @@ List<Lecture> lectures = [
     title: "10. Тема: Новое поколение инструментальных средств разработки мобильных HTML5-приложений. Intel XDK",
     description: "        Кроссплатформенная среда разработки Intel XDK, ориентированная на создание мобильных приложений с использованием веб-технологий: основные возможности и применяемые технологии (HTML5, CSS3, JavaScript, инструменты сборки, отладки и развёртывания приложений на различных мобильных платформах).",
     relatedModuleIds: [9],
+  ),
+];
+
+final List<Module> introModules = modules.where((m) => m.id == 6).toList();
+final List<Module> uiModules = modules.where((m) => [1, 5].contains(m.id)).toList();
+final List<Module> phoneModules = modules.where((m) => [2, 3, 4, 7, 8].contains(m.id)).toList();
+final List<Module> toolsModules = modules.where((m) => m.id == 9).toList();
+
+final List<Lecture> introLectures = lectures.where((l) => [1, 2, 3].contains(l.id)).toList();
+final List<Lecture> uiLectures = lectures.where((l) => [4, 5].contains(l.id)).toList();
+final List<Lecture> phoneLectures = lectures.where((l) => [6, 7, 8, 9].contains(l.id)).toList();
+final List<Lecture> toolsLectures = lectures.where((l) => l.id == 10).toList();
+
+final Module finalTestModule = modules.firstWhere((m) => m.id == 10);
+
+final List<MainModule> mainModules = [
+  MainModule(
+    id: 101,
+    title: "Введение в разработку мобильных приложений",
+    description: "Общие понятия и начальные лабораторные работы.",
+    subModules: introModules,
+    lectures: introLectures,
+  ),
+  MainModule(
+    id: 102,
+    title: "Основы разработки интерфейсов мобильных приложений",
+    description: "UI, навигация и взаимодействие с пользователем.",
+    subModules: uiModules,
+    lectures: uiLectures,
+  ),
+  MainModule(
+    id: 103,
+    title: "Использование возможностей смартфона",
+    description: "Жесты, камера, геолокация, библиотеки, базы данных.",
+    subModules: phoneModules,
+    lectures: phoneLectures,
+  ),
+  MainModule(
+    id: 104,
+    title: "Инструментальные средства разработки мобильных приложений",
+    description: "Intel XDK и другие инструменты.",
+    subModules: toolsModules,
+    lectures: toolsLectures,
   ),
 ];
